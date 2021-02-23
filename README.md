@@ -1,7 +1,24 @@
 # Rest-API-Node.js
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmbahagus%2FRest-API-Node.js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmbahagus%2FRest-API-Node.js?ref=badge_shield)
+> Rest API's, menggunakan express sebagai servernya 
+
+# Installation
+
+Pertama, install Node.js
+### Installer
+Download di [Node.js](https://nodejs.org)
+### Command Line
+```bash
+sudo apt install nodejs -y
+```
+### Cloning Dan Pemasangan
+```bash
+git clone https://github.com/mbahagus/Rest-API-Node.js
+cd Rest-API-Node.js
+npm install
+npm start
+```
 =======
-### Menggunakan Express Sebagai Servernya
 
 # Website
 ## [Home Page](https://www.apimau.ga)
