@@ -6,7 +6,7 @@
 
 Pertama, install Node.js
 ### Installer
-Download di [Node.js](https://nodejs.org)
+Download [Node.js](https://nodejs.org)
 ### Command Line
 ```bash
 sudo apt install nodejs -y
