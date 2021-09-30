@@ -26,6 +26,8 @@
     "request": "^2.88.2",
     "tiktok-scraper": "^1.4.12",
     "ytdl": "^1.4.1",
+"yt-search": "latest",
+"axios": "latest",
     "ytdl-core": "^4.4.5"
   }
 }
