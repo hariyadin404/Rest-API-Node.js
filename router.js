@@ -91,21 +91,18 @@ router.get("/ytmp3", async (req, res) => {
 router.get("/ytmp4", async (req, res) => {
   var id = req.query.url || req.query.link;
   if (!id) return res.json(respon.param);
-  ytMp4(id).then(result => {
-        res.status(200).send({
-            status: 200, 
-            result: result
-        });
-    }).catch(error => {
-        console.log(error);
-        res.status(500).send({
-            status: 500,
-            message: 'Internal Server Error'
-        })
-    });
-
+  if (id.includes("youtube")) {
+    urls = id;
+    var r,
+      rx = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
+    r = urls.match(rx);
+    id = r[1];
+  }
+  res.header("Content-Disposition", `attachment; filename="YouTube downloader rzkyfdlh.mp4"`);
+  ytdl(id, {
+    format: "mp4"
+  }).pipe(res);
 });
-
 router.get("/cuaca", async (req, res) => {
   var lokasi = req.query.kota || req.query.q;
   if (!lokasi) return res.json(respon.param);
